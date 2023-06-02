@@ -1,6 +1,6 @@
-# vue2-range-slider
+# vue2-simple-image-zoomer
 
-Range slider component of Vue.js
+Simple Image Zoomer component of Vue.js
 
 ## Features
 
@@ -14,44 +14,40 @@ Vue >= 2.0
 
 ## NPM
 ```
-npm install --save vue2-range-slider
+npm install --save vue2-simple-image-zoomer
 ```
 ## Yarn
 ```
-yarn add vue2-range-slider
+yarn add vue2-simple-image-zoomer
 ```
 
 ## Usage
 
 ### Basic Usage
-Just import vue2-range-slider component and use it in your components. The props are compatible with native `v-model` element, so you can use `min`, `max`, `step` as a object.
+Just import vue2-simple-image-zoomer component and use it in your components. The props are compatible with native `v-model` element, so you can use `example` as a object.
 
 ```html
 <template>
-  <range-slider
+  <simple-image-zoomer
     :min="10"
     :max="1000"
     step="10"
     v-model="sliderValue">
-  </range-slider>
+  </simple-image-zoomer>
 </template>
 
 <script>
-import RangeSlider from 'vue2-range-slider'
+import SimpleImageZoomer from 'vue2-simple-image-zoomer'
 // you probably need to import built-in style
-import 'vue2-range-slider/dist/vue2-range-slider.css'
+import 'vue2-simple-image-zoomer/dist/vue2-simple-image-zoomer.css'
 
 export default {
   data () {
     return {
-      sliderValue: {
-        min: 0,
-        max: 0,
-      }
     }
   },
   components: {
-    RangeSlider
+      SimpleImageZoomer
   }
 }
 </script>
@@ -62,37 +58,32 @@ export default {
 ```
 ### Available props:
 
-- `disabled` - if true, the slider value cannot be updated.
-- `min` - minimum value of the slider.
-- `max` - maximum value of the slider.
-- `step` - granularity of the slider value. e.g. if this is 3, the slider value will be 3, 6, 9, ...
-
 
 ### Install Globally
 ```
-Vue.use(Vue2RangeSlider)
+Vue.use(Vue2SimpleImageZoomer)
 ```
 
 ### Use Components Locally
 ```
-import RangeSlider from 'vue2-range-slider'
+import SimpleImageZoomer from 'vue2-simple-image-zoomer'
 ```
 
 ### Nuxt.js Usage
 
-create a plugin file `vue2-range-slider.js` inside `/plugins` dir
+create a plugin file `vue2-simple-image-zoomer.js` inside `/plugins` dir
 
 ```js
 import Vue from 'vue'
-import RangeSlider from 'vue2-range-slider'
+import SimpleImageZoomer from 'vue2-simple-image-zoomer'
 
-Vue.component('range-slider', RangeSlider)
+Vue.component('simple-image-zoomer', SimpleImageZoomer)
 ```
 
 import a plugin in nuxt.config.js with disable ssr mode
 
 ```js
-plugins: [{ src: '~/plugins/vue2-range-slider', ssr: false }]
+plugins: [{ src: '~/plugins/vue2-simple-image-zoomer', ssr: false }]
 ```
 
 ## License
