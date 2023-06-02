@@ -1,6 +1,17 @@
 <template>
   <div id="app">
-    <SimpleImageZoomer/>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <SimpleImageZoomer :zoomer-options="zoomerOptions"/>
+              </div>
+              <div class="col-md-6">
+                  <p>
+                      Breakpoints are the building blocks of responsive design. Use them to control when your layout can be adapted at a particular viewport or device size.
+                  </p>
+              </div>
+          </div>
+      </div>
   </div>
 </template>
 
@@ -13,7 +24,12 @@ export default {
       SimpleImageZoomer
   },
   data() {
-      return {}
+      return {
+          zoomerOptions: {
+              imagePath: 'https://usamaagro.com/server/public/images/20230524200213_original__media_68.jpg',
+              zoomFactor: 3,
+          }
+      }
     }
 }
 </script>
