@@ -1,7 +1,7 @@
 {
   "name": "vue2-simple-image-zoomer",
   "description": "A Vue 2 simple image zoomer plugin",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": false,
   "author": {
     "name": "Fazle Rabbi",
