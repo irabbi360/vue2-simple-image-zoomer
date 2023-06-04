@@ -4,7 +4,7 @@
          @mouseenter="showZoomedImage = true"
          @mouseleave="showZoomedImage = false">
         <div class="image-container">
-            <img :src="zoomerOptions.imagePath" class="img-fluid" alt="Product Image" ref="productImage" />
+            <img :src="imagePath" class="img-fluid" alt="Product Image" ref="productImage" />
         </div>
         <div class="zoomed-image-container" v-if="showZoomedImage" :style="zoomedImageStyle"></div>
     </div>
@@ -52,7 +52,7 @@ export default {
             const bgSizeX = (container.width / zoomedWidth) * 100;
             const bgSizeY = (container.height / zoomedHeight) * 100;
 
-            this.zoomedImageStyle.backgroundImage = `url(${this.zoomerOptions.imagePath})`;
+            this.zoomedImageStyle.backgroundImage = `url(${this.imagePath})`;
             this.zoomedImageStyle.backgroundPosition = `${bgPosX}% ${bgPosY}%`;
             this.zoomedImageStyle.backgroundSize = `${bgSizeX}% ${bgSizeY}%`;
         },
