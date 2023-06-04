@@ -13,6 +13,10 @@
 <script>
 export default {
     props: {
+        imagePath: {
+            type: String,
+            required: true
+        },
         zoomerOptions: {
             type: Object,
             required: true

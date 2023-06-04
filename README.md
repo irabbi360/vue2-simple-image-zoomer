@@ -23,11 +23,12 @@ yarn add vue2-simple-image-zoomer
 ## Usage
 
 ### Basic Usage
-Just import vue2-simple-image-zoomer component and use it in your components. The props are object & it must required, so you can use `zoomerOptions` as a object.
+Just import vue2-simple-image-zoomer component and use it in your components. The props are String and object & it must required, so you can use `imagePath` and `zoomerOptions` as a object.
 
 ```html
 <template>
   <simple-image-zoomer
+    :imagePath="imageUrl"
     :zoomer-options="zoomerOptions"
   >
   </simple-image-zoomer>
@@ -41,10 +42,10 @@ import 'vue2-simple-image-zoomer/dist/vue2-simple-image-zoomer.css'
 export default {
   data () {
     return {
+      imageUrl: 'https://example.com/product_image.jpg',
       zoomerOptions: {
-              imagePath: 'https://example.com/product_image.jpg',
-              zoomFactor: 3,
-          }
+        zoomFactor: 3,
+      }
     }
   },
   components: {

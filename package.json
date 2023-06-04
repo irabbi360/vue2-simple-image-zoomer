@@ -9,8 +9,9 @@
   },
   "keywords": [
     "vue",
-    "vue range slider",
-    "vuejs 2"
+    "vue product zoom",
+    "image zoom",
+    "vuejs image zoom"
   ],
   "license": "MIT",
   "files": [

@@ -3,7 +3,7 @@
       <div class="container">
           <div class="row">
               <div class="col-md-6">
-                  <SimpleImageZoomer :zoomer-options="zoomerOptions"/>
+                  <SimpleImageZoomer :imagePath="imagePath" :zoomer-options="zoomerOptions"/>
               </div>
               <div class="col-md-6">
                   <p>
@@ -25,10 +25,10 @@ export default {
   },
   data() {
       return {
-          zoomerOptions: {
-              imagePath: 'https://usamaagro.com/server/public/images/20230524200213_original__media_68.jpg',
-              zoomFactor: 3,
-          }
+        imagePath: 'https://usamaagro.com/server/public/images/20230524200213_original__media_68.jpg',
+        zoomerOptions: {
+            zoomFactor: 3,
+        }
       }
     }
 }
