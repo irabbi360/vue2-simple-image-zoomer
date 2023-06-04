@@ -31,6 +31,7 @@ export default {
                 backgroundPosition: '0% 0%',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: '200% 200%',
+                zIndex: 9999
             },
             // zoomFactor: 3, // Adjust the zoom factor as per your needs
         };

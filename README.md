@@ -78,8 +78,10 @@ create a plugin file `vue2-simple-image-zoomer.js` inside `/plugins` dir
 ```js
 import Vue from 'vue'
 import SimpleImageZoomer from 'vue2-simple-image-zoomer'
+// css
+import 'vue2-simple-image-zoomer/dist/vue2-simple-image-zoomer.css'
 
-Vue.component('simple-image-zoomer', SimpleImageZoomer)
+Vue.Use(SimpleImageZoomer)
 ```
 
 import a plugin in nuxt.config.js with disable ssr mode
