@@ -5,7 +5,6 @@ Simple Image Zoomer component of Vue.js
 ## Features
 
 - Compatible with native `real time` behavior
-- `v-model` event support
 - Touch device support
 ## Requirements
 
@@ -24,15 +23,13 @@ yarn add vue2-simple-image-zoomer
 ## Usage
 
 ### Basic Usage
-Just import vue2-simple-image-zoomer component and use it in your components. The props are compatible with native `v-model` element, so you can use `example` as a object.
+Just import vue2-simple-image-zoomer component and use it in your components. The props are object & it must required, so you can use `zoomerOptions` as a object.
 
 ```html
 <template>
   <simple-image-zoomer
-    :min="10"
-    :max="1000"
-    step="10"
-    v-model="sliderValue">
+    :zoomer-options="zoomerOptions"
+  >
   </simple-image-zoomer>
 </template>
 
@@ -44,6 +41,10 @@ import 'vue2-simple-image-zoomer/dist/vue2-simple-image-zoomer.css'
 export default {
   data () {
     return {
+      zoomerOptions: {
+              imagePath: 'https://example.com/product_image.jpg',
+              zoomFactor: 3,
+          }
     }
   },
   components: {
